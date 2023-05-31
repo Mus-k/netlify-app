@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400&family=Courgette&family=Kaushan+Script&family=Lobster&family=Montserrat:ital,wght@0,400;1,400;1,500;1,600&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&family=Poppins:ital,wght@0,100;0,600;0,700;0,900;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app {
+  width: 100%;
+  height: 100%;
+  background-color: #022c43;
+  @apply text-white;
+}
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #8b939c);
+  border-radius: 6px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #f395e1);
+  border-radius: 6px;
+}
+.bg-image {
+  background-image: radial-gradient(
+      circle at center center,
+      transparent,
+      rgb(33, 33, 33)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgb(33, 33, 33) 0px,
+      rgb(33, 33, 33) 2px,
+      transparent 2px,
+      transparent 10px,
+      rgb(33, 33, 33) 10px,
+      rgb(33, 33, 33) 11px,
+      transparent 11px,
+      transparent 21px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgb(47, 47, 47) 0px,
+      rgb(47, 47, 47) 4px,
+      transparent 4px,
+      transparent 8px
+    ),
+    linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+}
+
+.btn-bg {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(149, 29, 253, 1) 47%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  background-color: red;
+  transform: scale(1.1);
+}
+
+.transform {
+  transform: translate(-50%, -50%);
+}
+
+.sections {
+  /* height: calc(100vh - 70px); */
+  position: relative;
+  top: 70px;
+}
+
+.pages {
+  height: 100vh;
+}
+
+/* adress design */
+.adress {
+  transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+  background: #115173;
+}
+.adress:hover {
+  transform: scale(1);
+}
+
+.adress::before,
+.adress::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.adress::before {
+  transform: translateZ(4rem);
+  border: 5px solid rgba(187, 104, 35, 0.552);
+}
+.adress:hover {
+  transform: translateZ(0);
+}
+
+.adress::after {
+  transform: translateZ(-4rem);
+  background: rgb(234, 234, 236);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+.adress:hover {
+  transform: translateZ(-1px);
+}
+
+/* image around */
+.around {
+  --b: 5px;
+  padding: 10px;
+  background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--c))
+      0 0,
+    conic-gradient(from 180deg at top var(--b) right var(--b), var(--c)) 100% 0,
+    conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--c)) 0 100%,
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--c)) 100%
+      100%;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.aroundInitial {
+  --b: 5px; /* border thickness */
+  --c: #0000 25%, rgb(234, 229, 225) 0; /* define the color here */
+  padding: 10px;
+  background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--c))
+      0 0,
+    conic-gradient(from 180deg at top var(--b) right var(--b), var(--c)) 100% 0,
+    conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--c)) 0 100%,
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--c)) 100%
+      100%;
+  background-size: 50px 50px; /* adjust border length here */
+  background-repeat: no-repeat;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.aroundInitial:hover {
+  background-size: 51% 51%;
+}
+
+/* media query */
+
+@media screen and (max-width: 768px) {
+  .overlap {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .sections {
+    /* height: calc(100vh - 70px); */
+    position: relative;
+    top: 70px;
+    margin: 20px 250px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .overlap {
+    width: 327px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .overlap {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .overlap {
+    width: 250px;
+    height: 300px;
+  }
+}
+
+/* text size media query */
+@media screen and (min-width: 1700px) {
+  .skills-text {
+    font-size: 70px;
+  }
+  .skill-info {
+    font-size: 28px;
+  }
+}
+
+.skills-text {
+  font-size: 30px;
+}
+.skill-info {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 1500px) {
+  .skills-text {
+    font-size: 45px;
+  }
+  .skill-info {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .skills-text {
+    font-size: 80px;
+  }
+  .skill-info {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .skills-text {
+    font-size: 50px;
+  }
+  .skill-info {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .skills-text {
+    font-size: 40px;
+  }
+  .skill-info {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .skills-text {
+    font-size: 30px;
+  }
+  .skill-info {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .skills-text {
+    font-size: 20px;
+  }
+  .skill-info {
+    font-size: 14px;
+  }
+}
