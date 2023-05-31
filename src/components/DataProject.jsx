@@ -15,7 +15,7 @@ const data = [
     id: 2,
     title: "OpenBlog",
     img: person2,
-    desc: "I built responsive blog app using (MERN) Node.js, Express, React.js, and MongoDB, with a smooth transitions using framer motion ",
+    desc: "I built a responsive blog app using (MERN) Node.js, Express, React.js, and MongoDB, with a smooth transitions using framer motion ",
     page: "https://github.com/Mus-k/fullstack-mern-blog-project",
   },
 
