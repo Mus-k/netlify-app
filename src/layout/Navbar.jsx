@@ -10,7 +10,7 @@ const NavLink = ({ page, close, selectedPage, setSelectedPage }) => {
       offset={-100}
       spy={true}
       smooth={true}
-      duration={500}
+      duration={1000}
       className={`${selectedPage === lowerCasePage ? "text-[#ffd700]" : ""}
         hover:text-[#ffd700] transition duration-500`}
       to={`${lowerCasePage}`}
