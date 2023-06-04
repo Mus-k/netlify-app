@@ -8,7 +8,7 @@ const Skills = () => {
       {/* header and image image section */}
       <div className="md:flex md:justify-between md:gap-6">
         <motion.div
-          className="md:w-1/2"
+          className="md:w-3/4 lg:w-1/2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
