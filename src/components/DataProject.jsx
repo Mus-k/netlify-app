@@ -1,6 +1,6 @@
 import person1 from "../assets/projects/real-estate.PNG";
 import person2 from "../assets/projects/openblog.PNG";
-import person3 from "../assets/projects/responsive_tesla.PNG";
+import person3 from "../assets/projects/edulab-replicate.PNG";
 import person4 from "../assets/projects/cakeApp.PNG";
 
 const data = [
@@ -21,10 +21,10 @@ const data = [
 
   {
     id: 3,
-    title: "Tesla UI",
+    title: "Edulab-replicate",
     img: person3,
-    desc: "With Tailwind css and html I build a smooth User Interface of Tesla website. ",
-    page: "https://mus-k.github.io/Tesla-landing-page-with-tailwind/dist/index.html",
+    desc: "built with vanilla javascript with multiple functionalities in it.",
+    page: "https://edulab-replicate.netlify.app/",
   },
 
   {
